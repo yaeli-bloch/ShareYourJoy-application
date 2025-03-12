@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Server.Core.Services;
 using Server.Core.Models;
+using Server.API.ModelsDto;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,16 +16,7 @@ namespace Server.API.Controllers
         public FilesController(IFileService FileService)
         {
             _FileService = FileService;
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetrFile(string id)
-        {
-            var oFile = await _FileService.GetFileAsync(id);
-            if (oFile == null)
-                return NotFound();
-            return Ok(oFile);
-        }
+        }       
 
         [HttpGet]
         public async Task<IActionResult> GetAllFiles()
@@ -33,12 +25,22 @@ namespace Server.API.Controllers
             return Ok(orderFiles);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetFileById(string id)
+        {
+            var oFile = await _FileService.GetFileAsync(id);
+            if (oFile == null)
+                return NotFound();
+            return Ok(oFile);
+        }
         [HttpPost]
-        public async Task<IActionResult> AddFile([FromBody] OFile orderFile)
+        public async Task<IActionResult> AddFile([FromBody] FileDTO orderFile)
         {
             if (orderFile == null)
                 return BadRequest();
-            await _FileService.AddFileAsync(orderFile);
+            var FileToAdd=new OFile {Id=orderFile.Id,Title = orderFile.Title,FileUrl=orderFile.FileUrl
+            ,CreatedAt=orderFile.CreatedAt,UpdatedAt=orderFile.UpdatedAt,UserId=orderFile.UserId};
+            await _FileService.AddFileAsync(FileToAdd);
              return   Ok(orderFile);
         }
 

@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Server.Core.Repositories;
+
 namespace Server.Data.Repositories
 {
-    public class FileRepository
+    public class FileRepository:IFileRepository
     {
         private readonly DataContext _context;
 
@@ -19,7 +21,7 @@ namespace Server.Data.Repositories
         public async Task<OFile> GetFileByIdAsync(string id)
         {
             return await _context.Files
-                .Include(o => o.User)  // אם אתה צריך את פרטי המשתמש הקשור לקובץ
+                .Include(o => o.User) 
                 .FirstOrDefaultAsync(o => o.Id == id);
         }
 

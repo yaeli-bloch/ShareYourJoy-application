@@ -14,6 +14,6 @@ namespace Server.Core.Models
         public DateTime CreatedAt { get; set; }  // תאריך יצירה
         public DateTime UpdatedAt { get; set; }  // תאריך עדכון אחרון
         public int UserId { get; set; }  // קשר למשתמש שהעלה את הקובץ
-        public User User { get; set; }  //
+        public User User { get; set; }
     }
 }
