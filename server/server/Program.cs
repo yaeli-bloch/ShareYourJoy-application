@@ -12,9 +12,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-
+IConfiguration configuration = builder.Configuration;
 // הגדרת CORS (Cross-Origin Resource Sharing)
 builder.Services.AddCors(options =>
 {
@@ -31,12 +32,16 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+var awsSettings = configuration.GetSection("AwsSettings");
 
+var accessKeyId = awsSettings["AccessKeyId"];
+var secretAccessKey = awsSettings["SecretAccessKey"];
 // הגדרת המפתחות והשירותים של AWS (אם אתה משתמש ב-S3)
 builder.Services.AddDefaultAWSOptions(new AWSOptions
 {
+
     Region = RegionEndpoint.USEast1, // כאן תבחר את האזור המתאים לך (כמו USEast1)
-    Credentials = new BasicAWSCredentials("AKIATKJ74CV6HY3QMQLZ", "btUb4tQaEhMTaTuLoasaqAxlrW4VgSKTNnBVb+Pi") // הכנס את המפתחות שלך כאן
+    Credentials = new BasicAWSCredentials(accessKeyId, secretAccessKey) // הכנס את המפתחות שלך כאן
 });
 builder.Services.AddAWSService<IAmazonS3>();
 
