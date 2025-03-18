@@ -18,7 +18,7 @@ namespace Server.Service
             _FileRepository = FileRepository;
         }
 
-        public async Task<OFile> GetFileAsync(string id)
+        public async Task<OFile> GetFileAsync(int id)
         {
             return await _FileRepository.GetFileByIdAsync(id);
         }
@@ -40,7 +40,7 @@ namespace Server.Service
             await _FileRepository.UpdateFileAsync(oFile);
         }
 
-        public async Task DeleteFileAsync(string id)
+        public async Task DeleteFileAsync(int id)
         {
             await _FileRepository.DeleteFileAsync(id);
         }

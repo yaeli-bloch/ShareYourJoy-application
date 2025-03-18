@@ -18,10 +18,9 @@ namespace Server.Data.Repositories
             _context = context;
         }
 
-        public async Task<OFile> GetFileByIdAsync(string id)
+        public async Task<OFile> GetFileByIdAsync(int id)
         {
-            return await _context.Files
-                .Include(o => o.User) 
+            return await _context.Files                
                 .FirstOrDefaultAsync(o => o.Id == id);
         }
 
@@ -42,7 +41,7 @@ namespace Server.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteFileAsync(string id)
+        public async Task DeleteFileAsync(int id)
         {
             var orderFile = await GetFileByIdAsync(id);
             if (orderFile != null)

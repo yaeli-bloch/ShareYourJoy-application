@@ -18,30 +18,30 @@ namespace Server.Service
             _userRepository = userRepository;
         }
 
-        public async Task<User> GetUserByIdAsync(string id)
+        public async Task<Users> GetUserByIdAsync(int id)
         {
             return await _userRepository.GetUserByIdAsync(id);
         }
-        public async Task<User> GetUserByMail(string email)
+        public async Task<Users> GetUserByMail(string email)
         {
             return await _userRepository.GetUserByMail(email);
         }
-        public async Task<IEnumerable<User>> GetAllUsersAsync()
+        public async Task<IEnumerable<Users>> GetAllUsersAsync()
         {
             return await _userRepository.GetAllUsersAsync();
         }
 
-        public async Task<User> CreateUserAsync(User user)
+        public async Task<Users> CreateUserAsync(Users user, string passwordGroup)
         {
-            return await _userRepository.AddUserAsync(user);
+            return await _userRepository.AddUserAsync(user,  passwordGroup);
         }
 
-        public async Task<User> UpdateUserAsync(User user)
+        public async Task<Users> UpdateUserAsync(Users user)
         {
             return await _userRepository.UpdateUserAsync(user);
         }
 
-        public async Task DeleteUserAsync(string id)
+        public async Task DeleteUserAsync(int id)
         {
             await _userRepository.DeleteUserAsync(id);
         }

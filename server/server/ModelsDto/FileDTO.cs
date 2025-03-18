@@ -2,7 +2,7 @@
 {
     public class FileDTO
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }  // שם הקובץ
         public string FileUrl { get; set; }  // כתובת ה-URL של הקובץ
         public DateTime CreatedAt { get; set; }  // תאריך יצירה

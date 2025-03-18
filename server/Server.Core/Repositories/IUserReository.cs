@@ -9,11 +9,11 @@ namespace Server.Core.Repositories
 {
     public interface IUserRepository
     {
-        Task<User> GetUserByIdAsync(string id);
-        Task<IEnumerable<User>> GetAllUsersAsync();
-        Task<User> AddUserAsync(User user);
-        Task<User> UpdateUserAsync(User user);
-        Task DeleteUserAsync(string id);
-        Task<User> GetUserByMail(string email);
+        Task<Users> GetUserByIdAsync(int id);
+        Task<IEnumerable<Users>> GetAllUsersAsync();
+        Task<Users> AddUserAsync(Users user, string passwordGroup);
+        Task<Users> UpdateUserAsync(Users user);
+        Task DeleteUserAsync(int id);
+        Task<Users> GetUserByMail(string email);
     }
 }

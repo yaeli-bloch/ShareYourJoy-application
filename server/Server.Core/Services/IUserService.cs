@@ -9,12 +9,12 @@ namespace Server.Core.Services
 {
     public interface IUserService
     {
-        Task<User> GetUserByIdAsync(string id);
-        Task<IEnumerable<User>> GetAllUsersAsync();
-        Task<User> CreateUserAsync(User user);
-        Task<User> UpdateUserAsync(User user);
-        Task DeleteUserAsync(string id);
-        Task<User> GetUserByMail(string email);
+        Task<Users> GetUserByIdAsync(int id);
+        Task<IEnumerable<Users>> GetAllUsersAsync();
+        Task<Users> CreateUserAsync(Users user,string passwordGroup);
+        Task<Users> UpdateUserAsync(Users user);
+        Task DeleteUserAsync(int id);   
+        Task<Users> GetUserByMail(string email);
 
     }
 }

@@ -15,7 +15,9 @@ namespace Server.Data
         {
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Users> Users { get; set; }
         public DbSet<OFile> Files { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        
     }
 }

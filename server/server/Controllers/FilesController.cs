@@ -26,7 +26,7 @@ namespace Server.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetFileById(string id)
+        public async Task<IActionResult> GetFileById(int id)
         {
             var oFile = await _FileService.GetFileAsync(id);
             if (oFile == null)
@@ -45,7 +45,7 @@ namespace Server.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateFile(string id, [FromBody] OFile orderFile)
+        public async Task<IActionResult> UpdateFile(int id, [FromBody] OFile orderFile)
         {
             if (id != orderFile.Id)
                 return BadRequest();
@@ -54,7 +54,7 @@ namespace Server.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteFile(string id)
+        public async Task<IActionResult> DeleteFile(int id)
         {
             await _FileService.DeleteFileAsync(id);
             return NoContent();

@@ -12,36 +12,36 @@ namespace Server.Data.Repositories
             _context = context;
         }
 
-        public async Task<User> GetUserByIdAsync(string id)
+        public async Task<Users> GetUserByIdAsync(int id)
         {
             return await _context.Users.FindAsync(id);
         }
-        public async Task<User> GetUserByMail(string email)
+        public async Task<Users> GetUserByMail(string email)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(email));
             return user;
 
         }
-        public async Task<IEnumerable<User>> GetAllUsersAsync()
+        public async Task<IEnumerable<Users>> GetAllUsersAsync()
         {
             return await _context.Users.ToListAsync();
         }
 
-        public async Task<User> AddUserAsync(User user)
+        public async Task<Users> AddUserAsync(Users user, string passwordGroup)
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;
         }
 
-        public async Task<User> UpdateUserAsync(User user)
+        public async Task<Users> UpdateUserAsync(Users user)
         {
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return user;
         }
 
-        public async Task DeleteUserAsync(string id)
+        public async Task DeleteUserAsync(int id)
         {
             var user = await GetUserByIdAsync(id);
             if (user != null)

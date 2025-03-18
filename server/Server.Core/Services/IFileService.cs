@@ -9,10 +9,10 @@ namespace Server.Core.Services
 {
     public interface IFileService
     {
-        Task<OFile> GetFileAsync(string id);
+        Task<OFile> GetFileAsync(int id);
         Task<IEnumerable<OFile>> GetAllFilesAsync();
         Task AddFileAsync(OFile orderFile);
         Task UpdateFileAsync(OFile orderFile);
-        Task DeleteFileAsync(string id);
+        Task DeleteFileAsync(int id);
     }
 }

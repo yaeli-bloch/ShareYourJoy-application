@@ -89,3 +89,12 @@ D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\ne
 D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\System.CodeDom.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.Bcl.Memory.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.Bcl.TimeProvider.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\AWSSDK.Core.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\AWSSDK.S3.dll
+D:\Users\User\Desktop\יעלוש שנה ב'\practicum\server\server\bin\Debug\net7.0\AWSSDK.Extensions.NETCore.Setup.dll
