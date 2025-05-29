@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wb/PmrCM7dE+keUGhr/lYZ/u0POgVg4Kim+HrDPdutCZ9D8YTb6/TthGKCpa1K6UWvXIEO+Wq94qMT+J+xpMMA==",
+  "dgSpecHash": "cnabUDLVTZn7aD0d4aIrw9fWBCDJlGv/d0hDYI9omDND1OthzL/fpVOAhH956ihU6NQN0aUy4m6szAsJ9nueww==",
   "success": true,
-  "projectFilePath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\Server.Service.csproj",
+  "projectFilePath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\Server.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.memory\\9.0.0\\microsoft.bcl.memory.9.0.0.nupkg.sha512",

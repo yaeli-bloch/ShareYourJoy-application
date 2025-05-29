@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\server\\Server.API.csproj": {}
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\Server.API.csproj": {}
   },
   "projects": {
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj": {
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj",
         "projectName": "Server.Core",
-        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Data\\Server.Data.csproj": {
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Data\\Server.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Data\\Server.Data.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Data\\Server.Data.csproj",
         "projectName": "Server.Data",
-        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Data\\Server.Data.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Data\\Server.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Data\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -99,8 +99,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj"
+              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj"
               }
             }
           }
@@ -164,14 +164,14 @@
         }
       }
     },
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\Server.Service.csproj": {
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\Server.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\Server.Service.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\Server.Service.csproj",
         "projectName": "Server.Service",
-        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\Server.Service.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\Server.Service.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -192,8 +192,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj"
+              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj"
               }
             }
           }
@@ -237,14 +237,14 @@
         }
       }
     },
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\server\\Server.API.csproj": {
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\Server.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\server\\Server.API.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\Server.API.csproj",
         "projectName": "Server.API",
-        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\server\\Server.API.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\Server.API.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\server\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -266,14 +266,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj"
+              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj"
               },
-              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Data\\Server.Data.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Data\\Server.Data.csproj"
+              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Data\\Server.Data.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Data\\Server.Data.csproj"
               },
-              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\Server.Service.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Service\\Server.Service.csproj"
+              "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\Server.Service.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Service\\Server.Service.csproj"
               }
             }
           }

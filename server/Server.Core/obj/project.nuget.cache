@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1o6iQpO9C6imICzXXT9BTkiyRCPiwtBomZdyj1prdaITu06bDocZpfSYHmmmSXAfGGv6aweYB3OQkDhq4Mbw3A==",
+  "dgSpecHash": "PoDCZBJ8LC9m1WVS7G+T3/bncOwbwpfyG4bY6oFSoePmTsXRk1vGSukdbdM0/kRZJ+KatQqKVy+BbYJTH5EgKg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj",
+  "projectFilePath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",

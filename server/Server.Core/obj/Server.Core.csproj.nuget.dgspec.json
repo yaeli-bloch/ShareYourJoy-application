@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj": {}
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj": {}
   },
   "projects": {
-    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj": {
+    "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj",
         "projectName": "Server.Core",
-        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\Server.Core.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\Server.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\‏‏server - עותק (2)\\Server.Core\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\Server.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
