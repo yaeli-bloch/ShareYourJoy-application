@@ -1,39 +1,16 @@
-import { useEffect, useState } from 'react'
-
+import { RouterProvider } from 'react-router-dom';
 import './App.css'
-import Uploader from './components/upload'
-import Login from './components/Login';
-
-function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    if (token) {
-      setIsAuthenticated(true);  // אם יש טוקן ב-localStorage, המשתמש מחובר
-    }
-  }, []);
-
-  const handleLoginSuccess = () => {
-    setIsAuthenticated(true);  // עדכון אם הלוגין מצליח
-  };
-
+import HomePage from './components/HomePage';
+import { AuthProvider } from './context/AuthContext';
+import { Myrouter } from './MyRouter';
+function App() {  
   return (
-    <>
-      <div>hellooooooooooo</div>
-      <Uploader/>
-      <div>
-      {isAuthenticated ? (
-        <div>
-          <h1>ברוך הבא!</h1>
-          <button onClick={() => localStorage.removeItem('authToken')}>התנתק</button>
-        </div>
-      ) : (
-        <Login onLoginSuccess={handleLoginSuccess} />
-      )}
-    </div>
+    <>    
+    <AuthProvider>
+      <RouterProvider router={Myrouter} />
+      {/* <HomePage/>    */}
+    </AuthProvider>      
     </>
   )
 }
-
 export default App
