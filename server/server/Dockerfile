@@ -7,19 +7,19 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["server/Server.API.csproj", "server/"]
+COPY ["server/server.csproj", "server/"]
 COPY ["Server.Core/Server.Core.csproj", "Server.Core/"]
 COPY ["Server.Data/Server.Data.csproj", "Server.Data/"]
 COPY ["Server.Service/Server.Service.csproj", "Server.Service/"]
-RUN dotnet restore "server/Server.API.csproj"
+RUN dotnet restore "server/server.csproj"
 COPY . .
 WORKDIR "/src/server"
-RUN dotnet build "Server.API.csproj" -c Release -o /app/build
+RUN dotnet build "server.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Server.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "server.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Server.API.dll"]
+ENTRYPOINT ["dotnet", "server.dll"]
