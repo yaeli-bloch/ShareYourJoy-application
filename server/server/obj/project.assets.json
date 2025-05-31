@@ -4236,9 +4236,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\Server.csproj",
-      "projectName": "Server",
-      "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\Server.csproj",
+      "projectUniqueName": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\server.csproj",
+      "projectName": "server",
+      "projectPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\server.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "D:\\Users\\User\\Desktop\\יעלוש שנה ב'\\practicum\\server\\server\\obj\\",
       "projectStyle": "PackageReference",
