@@ -191,9 +191,7 @@ import {
   IconButton,
   Tooltip,
   Card,
-  CardContent,
-  useTheme,
-  useMediaQuery,
+  CardContent, 
 } from "@mui/material"
 import CloudUploadIcon from "@mui/icons-material/CloudUpload"
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile"
@@ -228,7 +226,7 @@ const float = keyframes`
 `
 
 // סטיילינג מותאם לשדות הטקסט
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField)(() => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "12px",
     transition: "all 0.3s ease",
@@ -259,15 +257,15 @@ const Uploader = ({ GroupId, onUploadFinish }: { GroupId: number; onUploadFinish
   const [progress, setProgress] = useState(0)
   const [title, setTitle] = useState("")
   const [uploadDate, setUploadDate] = useState("")
-  const [content, setContent] = useState("")
+  const [, setContent] = useState("")
   const [showForm, setShowForm] = useState(false)
   const [isUploading, setIsUploading] = useState(false)
   const [uploadSuccess, setUploadSuccess] = useState(false)
   const [dragActive, setDragActive] = useState(false)
   const { user } = useAuth()
   const fileInputRef = useRef<HTMLInputElement>(null)
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+  //const theme = useTheme()
+ // const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {

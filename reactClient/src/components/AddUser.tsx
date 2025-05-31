@@ -133,7 +133,9 @@ const shimmer = keyframes`
 `;
 
 // Decorative element
-const DecorativeCircle = ({ size, color, top, left, right, bottom, delay }) => {
+const DecorativeCircle = ({ size, color, top, left, right, bottom, delay }:{size:any
+  ,color:any,top:any,left:any,right:any,bottom:any,delay:any
+}) => {
   return (
     <Box
       sx={{
@@ -170,7 +172,6 @@ const AddUser = () => {
   const vibrantGreen = "#00C851";    // Success Green
   const vibrantBlue = "#1E90FF";     // DodgerBlue
   const vibrantPurple = "#8A2BE2";   // BlueViolet
-  const vibrantPink = "#FF1493";     // DeepPink
   const vibrantTeal = "#00CED1";     // DarkTurquoise
 
   // פונקציה ליצירת סיסמה אקראית באורך 6 תווים
@@ -210,14 +211,14 @@ const AddUser = () => {
         password = generateRandomPassword();
 
         // אם לא קיים – יוצרים משתמש חדש
-        const registerResponse = await axios.post(`https://localhost:7207/api/auth/register`, {
-          firstName: name,           // מאתרים את שם המשתמש
-          lastName: "---",        // שם משפחה (תוכל לשנות לפי הצורך)
-          previousLastName: "---", // שם משפחה נוסף אם יש לך מידע
-          numberOfChildren: 0,       // כמות ילדים (בהנחה שאין ילדים)
-          email,
-          password,                  // הסיסמה שנוצרה
-        });
+        // const registerResponse = await axios.post(`https://localhost:7207/api/auth/register`, {
+        //   firstName: name,           // מאתרים את שם המשתמש
+        //   lastName: "---",        // שם משפחה (תוכל לשנות לפי הצורך)
+        //   previousLastName: "---", // שם משפחה נוסף אם יש לך מידע
+        //   numberOfChildren: 0,       // כמות ילדים (בהנחה שאין ילדים)
+        //   email,
+        //   password,                  // הסיסמה שנוצרה
+        // });
 
         // אחרי יצירת המשתמש, מקבלים את ה-id
         const userResponse = await axios.get(`https://localhost:7207/api/user/email/${encodeURIComponent(email)}`);
@@ -277,10 +278,10 @@ const AddUser = () => {
       }}
     >
       {/* Decorative elements with vibrant colors */}
-      <DecorativeCircle size="300px" color={vibrantGreen} top="-5%" right="-5%" delay={0} />
-      <DecorativeCircle size="250px" color={vibrantBlue} bottom="-10%" left="-10%" delay={500} />
-      <DecorativeCircle size="200px" color={vibrantPurple} top="60%" right="-5%" delay={1000} />
-      <DecorativeCircle size="180px" color={vibrantTeal} top="20%" left="-5%" delay={1500} />
+      <DecorativeCircle size="300px" color={vibrantGreen} top="-5%" right="-5%" delay={0} left={undefined} bottom={undefined} />
+      <DecorativeCircle size="250px" color={vibrantBlue} bottom="-10%" left="-10%" delay={500} top={undefined} right={undefined} />
+      <DecorativeCircle size="200px" color={vibrantPurple} top="60%" right="-5%" delay={1000} left={undefined} bottom={undefined} />
+      <DecorativeCircle size="180px" color={vibrantTeal} top="20%" left="-5%" delay={1500} right={undefined} bottom={undefined} />
 
       <Container maxWidth="sm">
         {/* Back button */}

@@ -235,11 +235,10 @@ import {
   useTheme,
 } from "@mui/material"
 import axios from "axios"
-import { useNavigate, useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import ChevronRightIcon from "@mui/icons-material/ChevronRight"
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft"
 import EventIcon from "@mui/icons-material/Event"
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ImageIcon from "@mui/icons-material/Image"
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday"
 import EventAvailableIcon from "@mui/icons-material/EventAvailable"
@@ -255,8 +254,7 @@ const CalendarPage = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear())
 
   const location = useLocation()
-  const navigate = useNavigate()
-  const groupId = location.state?.groupId
+    const groupId = location.state?.groupId
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
@@ -264,8 +262,7 @@ const CalendarPage = () => {
   const luxuryGold = "#D4AF37" // זהב יוקרתי
   const luxuryPurple = "#800080" // סגול יוקרתי
   const luxuryBlue = "#0047AB" // כחול יוקרתי
-  const luxuryRed = "#B22222" // אדום יוקרתי
-  const luxuryGreen = "#006400" // ירוק יוקרתי
+
 
   useEffect(() => {
     const fetchFiles = async () => {
@@ -299,11 +296,11 @@ const CalendarPage = () => {
     setSelectedFile(null)
   }
 
-  const handleBackToGroup = () => {
-    if (groupId) {
-      navigate("/MyGroup", { state: { groupId } })
-    }
-  }
+  // const handleBackToGroup = () => {
+  //   if (groupId) {
+  //     navigate("/MyGroup", { state: { groupId } })
+  //   }
+  // }
 
   const handleMonthChange = (direction: string) => {
     if (direction === "next") {

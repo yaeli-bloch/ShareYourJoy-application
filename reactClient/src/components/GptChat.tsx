@@ -157,9 +157,7 @@ import {
   CircularProgress,
   alpha,
   Card,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material"
+  } from "@mui/material"
 import SendIcon from "@mui/icons-material/Send"
 import SmartToyIcon from "@mui/icons-material/SmartToy"
 import PersonIcon from "@mui/icons-material/Person"
@@ -183,7 +181,7 @@ const fadeIn = keyframes`
 `
 
 // סטיילינג מותאם לשדה הטקסט
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField)(() => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "24px",
     transition: "all 0.3s ease",
@@ -221,8 +219,8 @@ const GptChat = ({ groupId }: { groupId: number }) => {
   const [initialLoading, setInitialLoading] = useState(true)
   const bottomRef = useRef<HTMLDivElement>(null)
   const chatContainerRef = useRef<HTMLDivElement>(null)
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+ 
+  
 
   useEffect(() => {
     const fetchGroupContent = async () => {

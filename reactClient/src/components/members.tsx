@@ -1,144 +1,4 @@
-// import { useState, useEffect } from "react";
-// import {
-//   Card, CardContent, CardActions, Button, Typography, List, ListItem,
-//   ListItemText, Dialog, DialogTitle, DialogContent, DialogActions,
-//   TextField, Snackbar, Alert
-// } from "@mui/material";
-// import { useLocation, useNavigate } from "react-router-dom";
-
-// interface User {
-//   id: number;
-//   name: string;
-//   email: string;
-// }
-
-// const MembersOfGroup = () => {
-//   const [users, setUsers] = useState<User[]>([]);
-//   const [selectedUser, setSelectedUser] = useState<User | null>(null);
-//   const [subject, setSubject] = useState("");
-//   const [body, setBody] = useState("");
-//   const [snackbar, setSnackbar] = useState<{ open: boolean; message: string; severity: "success" | "error" }>({
-//     open: false,
-//     message: "",
-//     severity: "success"
-//   });
-
-//   const location = useLocation();
-//   const groupId = location.state?.groupId;
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const fetchUsers = async () => {
-//       try {
-//         const response = await fetch(`https://localhost:7207/api/User/byGroup/${groupId}`);
-//         const rawData = await response.json();
-
-//         const formattedData = rawData.map((user: any) => ({
-//           id: user.id,
-//           name: `${user.firstName} ${user.lastName}`,
-//           email: user.email,
-//         }));
-
-//         setUsers(formattedData);
-//       } catch (error) {
-//         console.error("Error fetching users:", error);
-//       }
-//     };
-
-//     if (groupId) fetchUsers();
-//   }, [groupId]);
-
-//   const handleSendEmail = async () => {
-//     if (!selectedUser) return;
-//     try {
-//       await fetch("https://localhost:7207/api/mail/send-email", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({
-//           to: selectedUser.email,
-//           subject,
-//           body,
-//         }),
-//       });
-
-//       setSnackbar({ open: true, message: "המייל נשלח בהצלחה!", severity: "success" });
-//       setSelectedUser(null);
-//       setSubject("");
-//       setBody("");
-//     } catch (err) {
-//       console.error("Email send failed", err);
-//       setSnackbar({ open: true, message: "שליחת המייל נכשלה", severity: "error" });
-//     }
-//   };
-
-//   return (
-//     <Card sx={{ maxWidth: 500, margin: "auto", mt: 4, p: 2, boxShadow: 3 }}>
-//       <CardContent>
-//         <Typography variant="h5" gutterBottom>
-//           חברים בקבוצה
-//         </Typography>
-//         <List>
-//           {users.map((user) => (
-//             <ListItem key={user.id} secondaryAction={
-//               <Button variant="outlined" onClick={() => setSelectedUser(user)}>
-//                 שלח מייל
-//               </Button>
-//             }>
-//               <ListItemText primary={user.name} />
-//             </ListItem>
-//           ))}
-//         </List>
-//       </CardContent>
-
-//       {/* טופס שליחה */}
-//       <Dialog open={!!selectedUser} onClose={() => setSelectedUser(null)}>
-//         <DialogTitle>שלח מייל ל-{selectedUser?.name}</DialogTitle>
-//         <DialogContent>
-//           <Typography variant="body2" color="textSecondary">
-//             אל: {selectedUser?.email}
-//           </Typography>
-//           <TextField
-//             label="נושא"
-//             fullWidth
-//             value={subject}
-//             onChange={(e) => setSubject(e.target.value)}
-//             sx={{ mt: 2 }}
-//           />
-//           <TextField
-//             label="תוכן המייל"
-//             multiline
-//             rows={4}
-//             fullWidth
-//             value={body}
-//             onChange={(e) => setBody(e.target.value)}
-//             sx={{ mt: 2 }}
-//           />
-//         </DialogContent>
-//         <DialogActions>
-//           <Button onClick={() => setSelectedUser(null)}>ביטול</Button>
-//           <Button variant="contained" onClick={handleSendEmail}>שלח</Button>
-//         </DialogActions>
-//       </Dialog>
-
-//       <CardActions>
-//         <Button onClick={() => navigate("/MyGroup", { state: { groupId } })} variant="contained" color="primary">
-//           סגור
-//         </Button>
-//       </CardActions>
-
-//       {/* snackbar להצלחות ושגיאות */}
-//       <Snackbar open={snackbar.open} autoHideDuration={5000} onClose={() => setSnackbar({ ...snackbar, open: false })}>
-//         <Alert severity={snackbar.severity} variant="filled" onClose={() => setSnackbar({ ...snackbar, open: false })}>
-//           {snackbar.message}
-//         </Alert>
-//       </Snackbar>
-//     </Card>
-//   );
-// };
-
-// export default MembersOfGroup;
 "use client"
-
 import { useState, useEffect } from "react"
 import {
   Card,
@@ -157,16 +17,13 @@ import {
   Paper,
   alpha,
   IconButton,
-  useTheme,
-  useMediaQuery,
   Grid,
   Tooltip,
   Zoom,
 } from "@mui/material"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation} from "react-router-dom"
 import EmailIcon from "@mui/icons-material/Email"
 import CloseIcon from "@mui/icons-material/Close"
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import PersonIcon from "@mui/icons-material/Person"
 import SubjectIcon from "@mui/icons-material/Subject"
 import MessageIcon from "@mui/icons-material/Message"
@@ -176,15 +33,7 @@ import SearchIcon from "@mui/icons-material/Search"
 import { styled } from "@mui/material/styles"
 import { keyframes } from "@mui/system"
 
-// אנימציה לאפקט הזוהר
-const shimmer = keyframes`
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-`
+
 
 // אנימציה לאפקט הריחוף
 const float = keyframes`
@@ -200,7 +49,7 @@ const float = keyframes`
 `
 
 // סטיילינג מותאם לשדות הטקסט
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField)(() => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "12px",
     transition: "all 0.3s ease",
@@ -250,12 +99,7 @@ const MembersOfGroup = () => {
   const [searchTerm, setSearchTerm] = useState("")
 
   const location = useLocation()
-  const groupId = location.state?.groupId
-  const navigate = useNavigate()
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
-  const isTablet = useMediaQuery(theme.breakpoints.down("md"))
-
+  const groupId = location.state?.groupId 
   useEffect(() => {
     const fetchUsers = async () => {
       setIsLoading(true)
