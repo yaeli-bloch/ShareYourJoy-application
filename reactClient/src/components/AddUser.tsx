@@ -27,14 +27,14 @@
 //       setError("");
 
 //       // בדיקת אם האימייל קיים
-//       const { data } = await axios.get(`https://localhost:7207/api/user/email-exists?email=${email}`);
+//       const { data } = await axios.get(`https://localhost:7287/api/user/email-exists?email=${email}`);
 
 //       let userId;
 //       let password = ""; // הגדרת משתנה הסיסמה מחוץ לתנאי
 
 //       if (data.exists) {
 //         // אם קיים, משיגים את ה-id מהשרת
-//         const userResponse = await axios.get(`https://localhost:7207/api/user/email/${encodeURIComponent(email)}`);
+//         const userResponse = await axios.get(`https://localhost:7287/api/user/email/${encodeURIComponent(email)}`);
 //         userId = userResponse.data.id;
 //       } else {
 //         // אם לא קיים, יוצרים סיסמה אקראית
@@ -197,36 +197,36 @@ const AddUser = () => {
 
     try {
       // בדיקת אם האימייל קיים
-      const { data } = await axios.get(`https://localhost:7207/api/user/email-exists?email=${email}`);
+      const { data } = await axios.get(`https://localhost:7287/api/user/email-exists?email=${email}`);
 
       let userId;
       let password = ""; // הגדרת משתנה הסיסמה מחוץ לתנאי
 
       if (data.exists) {
         // אם קיים, משיגים את ה-id מהשרת
-        const userResponse = await axios.get(`https://localhost:7207/api/user/email/${encodeURIComponent(email)}`);
+        const userResponse = await axios.get(`https://localhost:7287/api/user/email/${encodeURIComponent(email)}`);
         userId = userResponse.data.id;
       } else {
         // אם לא קיים, יוצרים סיסמה אקראית
         password = generateRandomPassword();
 
         // אם לא קיים – יוצרים משתמש חדש
-        // const registerResponse = await axios.post(`https://localhost:7207/api/auth/register`, {
-        //   firstName: name,           // מאתרים את שם המשתמש
-        //   lastName: "---",        // שם משפחה (תוכל לשנות לפי הצורך)
-        //   previousLastName: "---", // שם משפחה נוסף אם יש לך מידע
-        //   numberOfChildren: 0,       // כמות ילדים (בהנחה שאין ילדים)
-        //   email,
-        //   password,                  // הסיסמה שנוצרה
-        // });
+        const registerResponse = await axios.post(`https://localhost:7287/api/auth/register`, {
+          firstName: name,           // מאתרים את שם המשתמש
+          lastName: "---",        // שם משפחה (תוכל לשנות לפי הצורך)
+          previousLastName: "---", // שם משפחה נוסף אם יש לך מידע
+          numberOfChildren: 0,       // כמות ילדים (בהנחה שאין ילדים)
+          email,
+          password,                  // הסיסמה שנוצרה
+        });
 
         // אחרי יצירת המשתמש, מקבלים את ה-id
-        const userResponse = await axios.get(`https://localhost:7207/api/user/email/${encodeURIComponent(email)}`);
+        const userResponse = await axios.get(`https://localhost:7287/api/user/email/${encodeURIComponent(email)}`);
         userId = userResponse.data.id;
       }
 
       // הוספת המשתמש לקבוצה
-      await axios.post(`https://localhost:7207/api/group/${groupId}/users/${userId}`);
+      await axios.post(`https://localhost:7287/api/group/${groupId}/users/${userId}`);
       
       setIsSuccess(true);
 
@@ -239,7 +239,7 @@ const AddUser = () => {
       <h3>בברכה צוות המערכת</h3></div>`;
 
       // שליחת המייל
-      await fetch("https://localhost:7207/api/mail/send-email", {
+      await fetch("https://localhost:7287/api/mail/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

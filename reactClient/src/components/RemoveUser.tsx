@@ -13,7 +13,7 @@
 //     const handleSubmit = async (e: { preventDefault: () => void; }) => {
 //         e.preventDefault();
 //         try {
-//             await axios.delete(`https://localhost:7207/api/group/${groupId}/users/${mail}`);
+//             await axios.delete(`https://localhost:7287/api/group/${groupId}/users/${mail}`);
 //             setMessage('המשתמש הוסר בהצלחה.');
 //         } catch (error: unknown) {
 //             if (axios.isAxiosError(error)) {
@@ -142,7 +142,7 @@ const RemoveUser: React.FC = () => {
     setMessage('');
 
     try {
-      await axios.delete(`https://localhost:7207/api/group/${groupId}/users/${mail}`);
+      await axios.delete(`https://localhost:7287/api/group/${groupId}/users/${mail}`);
       setMessage('המשתמש הוסר בהצלחה.');
       setIsSuccess(true);
 

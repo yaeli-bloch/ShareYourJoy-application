@@ -76,7 +76,7 @@ const MyGroups = () => {
 
     setIsLoading(true);
     axios
-      .get(`https://localhost:7207/api/user/${user.id}/groups`)
+      .get(`https://localhost:7287/api/user/${user.id}/groups`)
       .then((response) => {
         setGroups(response.data);
         setIsLoading(false);
@@ -637,7 +637,7 @@ export default MyGroups;
 
 //     setIsLoading(true);
 //     axios
-//       .get<Group[]>(`https://localhost:7207/api/user/${user.id}/groups`)
+//       .get<Group[]>(`https://localhost:7287/api/user/${user.id}/groups`)
 //       .then((response) => {
 //         setGroups(response.data);
 //         setIsLoading(false);

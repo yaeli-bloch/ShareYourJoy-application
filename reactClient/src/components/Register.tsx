@@ -24,7 +24,7 @@
 //     };
 //     try {
 //       // קריאת POST ל-API עם הנתונים שנשלחים מהמשתמש
-//       const response = await axios.post('https://localhost:7207/api/auth/register', user);
+//       const response = await axios.post('https://localhost:7287/api/auth/register', user);
 
 //       if (response.data.token) {
 //         if (response.data.token) {
@@ -199,7 +199,7 @@ const Register = ({ onRegisterSuccess }: { onRegisterSuccess: () => void }) => {
 
     try {
       // קריאת POST ל-API עם הנתונים שנשלחים מהמשתמש
-      const response = await axios.post('https://localhost:7207/api/auth/register', user);
+      const response = await axios.post('https://localhost:7287/api/auth/register', user);
 
       if (response.data.token) {
         const registeredUser = {

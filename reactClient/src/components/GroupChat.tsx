@@ -22,7 +22,7 @@
 
 //   const fetchMessages = async () => {
 //     try {
-//       const response = await axios.get(`https://localhost:7207/api/messages/group/${groupId}`);
+//       const response = await axios.get(`https://localhost:7287/api/messages/group/${groupId}`);
 //       setMessages(response.data);
 //     } catch (error) {
 //       console.error('שגיאה בהבאת הודעות:', error);
@@ -32,7 +32,7 @@
 //   const handleSendMessage = async () => {
 //     if (!newMessage.trim()) return;
 //     try {
-//       await axios.post(`https://localhost:7207/api/messages`, {
+//       await axios.post(`https://localhost:7287/api/messages`, {
 //         userId,
 //         name:user?.firstName+" "+user?.lastName,
 //         groupId,
@@ -48,7 +48,7 @@
 
 //   const handleDeleteMessage = async (messageId: number) => {
 //     try {
-//       await axios.delete(`https://localhost:7207/api/messages/${messageId}?userId=${userId}`);
+//       await axios.delete(`https://localhost:7287/api/messages/${messageId}?userId=${userId}`);
 //       fetchMessages();
 //     } catch (error) {
 //       console.error('שגיאה במחיקת הודעה:', error);
@@ -144,7 +144,7 @@ const GroupChat = ({ groupId, userId }: { groupId: number; userId: number }) => 
 
   const fetchMessages = async () => {
     try {
-      const response = await axios.get(`https://localhost:7207/api/messages/group/${groupId}`);
+      const response = await axios.get(`https://localhost:7287/api/messages/group/${groupId}`);
       setMessages(response.data);
     } catch (error) {
       console.error('שגיאה בהבאת הודעות:', error);
@@ -154,7 +154,7 @@ const GroupChat = ({ groupId, userId }: { groupId: number; userId: number }) => 
   const handleSendMessage = async () => {
     if (!newMessage.trim()) return;
     try {
-      await axios.post(`https://localhost:7207/api/messages`, {
+      await axios.post(`https://localhost:7287/api/messages`, {
         userId,
         name: user?.firstName+" "+user?.lastName,
         groupId,
@@ -169,7 +169,7 @@ const GroupChat = ({ groupId, userId }: { groupId: number; userId: number }) => 
 
   const handleDeleteMessage = async (messageId: number) => {
     try {
-      await axios.delete(`https://localhost:7207/api/messages/${messageId}?userId=${userId}`);
+      await axios.delete(`https://localhost:7287/api/messages/${messageId}?userId=${userId}`);
       fetchMessages();
     } catch (error) {
       console.error('שגיאה במחיקת הודעה:', error);
@@ -284,7 +284,7 @@ export default GroupChat;
 
 //   const fetchMessages = async () => {
 //     try {
-//       const response = await axios.get(`https://localhost:7207/api/messages/group/${groupId}`);
+//       const response = await axios.get(`https://localhost:7287/api/messages/group/${groupId}`);
 //       setMessages(response.data);
 //     } catch (error) {
 //       console.error('שגיאה בהבאת הודעות:', error);
@@ -296,7 +296,7 @@ export default GroupChat;
     
 //     setIsTyping(true);
 //     try {
-//       await axios.post(`https://localhost:7207/api/messages`, {
+//       await axios.post(`https://localhost:7287/api/messages`, {
 //         userId,
 //         name: user?.firstName + " " + user?.lastName,
 //         groupId,
@@ -313,7 +313,7 @@ export default GroupChat;
 
 //   const handleDeleteMessage = async (messageId: number) => {
 //     try {
-//       await axios.delete(`https://localhost:7207/api/messages/${messageId}?userId=${userId}`);
+//       await axios.delete(`https://localhost:7287/api/messages/${messageId}?userId=${userId}`);
 //       fetchMessages();
 //     } catch (error) {
 //       console.error('שגיאה במחיקת הודעה:', error);
